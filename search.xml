@@ -472,53 +472,14 @@
       </tags>
   </entry>
   <entry>
-    <title>latex-test</title>
+    <title>java 07 字符串</title>
     <url>/2024/03/12/java07/</url>
-    <content><![CDATA[<p>\[ E &#x3D; mc^2 \]</p>
-<p>$E&#x3D;mc^2$</p>
-<div>\[\frac{a}{b}\\
-\left|\begin{matrix}
-a&b&c
-\end{matrix}\right|\\
-\overrightarrow x\\
-\times
-\div
-\in
-\ni
-\notin
-\subset
-\nsubseteq
-\approx
-\,dx
-\\
-\begin{bmatrix}
-a&b&c\\
-d&f&g
-\end{bmatrix}\\
-\begin{vmatrix}
-a&b&c\\
-d&f&g
-\end{vmatrix}\\
-\begin{Bmatrix}
-a&b&c\\
-d&f&g
-\end{Bmatrix}\\
-\begin{Vmatrix}
-a&b&c\\
-d&f&g
-\end{Vmatrix}\\
-\leq\
-\geq\\
-    \int_a^bf(x)dx\]</div>
-
-
-
-]]></content>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>test</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>
