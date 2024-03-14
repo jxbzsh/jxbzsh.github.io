@@ -14,6 +14,12 @@
   --primary-30: rgba(175, 180, 43, 0.3);
   --primary-weak: #c0ca33;
   --primary-weak-50: rgba(192, 202, 51, 0.5);
+  --primary: #7291fa;
+  --primary-70: rgba(114, 145, 250, 0.7);
+  --primary-50: rgba(114, 145, 250, 0.5);
+  --primary-30: rgba(114, 145, 250, 0.3);
+  --primary-weak: #7291fa;
+  --primary-weak-50: rgba(114, 145, 250, 0.5);
   --body-color: #5d5d5e;
   --body-color-5: rgba(93, 93, 94, 0.05);
   --body-bg-color: #00151f;
@@ -61,6 +67,12 @@
   --primary-30: rgba(175, 180, 43, 0.3);
   --primary-weak: #c0ca33;
   --primary-weak-50: rgba(192, 202, 51, 0.5);
+  --primary: #7291fa;
+  --primary-70: rgba(114, 145, 250, 0.7);
+  --primary-50: rgba(114, 145, 250, 0.5);
+  --primary-30: rgba(114, 145, 250, 0.3);
+  --primary-weak: #7291fa;
+  --primary-weak-50: rgba(114, 145, 250, 0.5);
   --body-color: #d1d9e9b3;
   --body-color-5: rgba(209, 217, 233, 0.05);
   --body-bg-color: #00151f;
@@ -859,7 +871,7 @@ html.is-animating .trm-swup-animation {
   line-height: 80px;
   color: var(--theme-color, #00283a);
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
   font-weight: 700;
   transition: all 0.4s ease-in-out;
@@ -3787,4 +3799,20 @@ pre .coffeescript .title {
 .trm-fixed-container.offset #trm-back-top {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+:root {
+  --primary: #5a5df0;
+  --primary-70: rgba(90, 93, 240, 0.7);
+  --primary-50: rgba(90, 93, 240, 0.5);
+  --primary-30: rgba(90, 93, 240, 0.3);
+  --primary-weak: #697be2;
+  --primary-weak-50: rgba(105, 123, 226, 0.5);
+}
+:root.dark {
+  --primary: #a4ce60;
+  --primary-70: rgba(164, 206, 96, 0.7);
+  --primary-50: rgba(164, 206, 96, 0.5);
+  --primary-30: rgba(164, 206, 96, 0.3);
+  --primary-weak: #82df7a;
+  --primary-weak-50: rgba(130, 223, 122, 0.5);
 }

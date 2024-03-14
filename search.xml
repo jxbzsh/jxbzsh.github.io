@@ -327,6 +327,57 @@
       </tags>
   </entry>
   <entry>
+    <title>java 04 数组</title>
+    <url>/2024/03/04/java04/</url>
+    <content><![CDATA[<h1 id="Java数组"><a href="#Java数组" class="headerlink" title="Java数组"></a>Java数组</h1><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><ol>
+<li><p><strong>静态初始化</strong></p>
+<p><code>数据类型[] 数组名 = new 数据类型[] &#123;元素1，元素2，元素3...&#125;;</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] array1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[] &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br><span class="hljs-type">int</span>[] array2 = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;  <span class="hljs-comment">//简写</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>动态初始化</strong></p>
+<p><code>数据类型[] 数组名 = new 数据类型[数组长度];</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">3</span>];<br></code></pre></td></tr></table></figure>
+
+<p>数组默认初始化值:</p>
+<ul>
+<li><strong>整数类型：</strong>0</li>
+<li><strong>小数类型：</strong>0.0</li>
+<li><strong>字符类型：</strong>‘&#x2F;u0000’   空格</li>
+<li><strong>布尔类型：</strong>false</li>
+<li><strong>引用数据类型：</strong>null</li>
+</ul>
+</li>
+</ol>
+<h2 id="数组的地址与元素访问"><a href="#数组的地址与元素访问" class="headerlink" title="数组的地址与元素访问"></a>数组的地址与元素访问</h2><ol>
+<li><p><strong>数组的地址</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br>System.out.println(arr);  <span class="hljs-comment">//[I@6d03e736</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>“I”</strong>是数组类型，<strong>“6d03e736”</strong>是数组在内存中的位置</p>
+</li>
+<li><p><strong>元素访问</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br><br>System.out.println(arr[<span class="hljs-number">0</span>]);  <span class="hljs-comment">//1</span><br>System.out.println(arr[<span class="hljs-number">1</span>]);  <span class="hljs-comment">//2</span><br>System.out.println(arr[<span class="hljs-number">2</span>]);  <span class="hljs-comment">//3</span><br><br><span class="hljs-comment">//获取</span><br><span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> arr[<span class="hljs-number">0</span>];<br>System.out.println(num);  <span class="hljs-comment">//1</span><br><br><span class="hljs-comment">//存储</span><br>arr[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>;<br>System.out.println(arr[<span class="hljs-number">0</span>]);  <span class="hljs-comment">//10</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="数组的内存图"><a href="#数组的内存图" class="headerlink" title="数组的内存图"></a>数组的内存图</h2><ol>
+<li><p><strong>各自指向不同空间</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br><span class="hljs-type">int</span>[] arr2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br></code></pre></td></tr></table></figure>
+
+<p>此时arr1和arr2通过new在堆内存中占用两个内存空间。arr1和arr2相互独立。</p>
+</li>
+<li><p><strong>指向同一空间</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br><span class="hljs-type">int</span>[] arr2 = arr1;<br></code></pre></td></tr></table></figure>
+
+<p>这段代码中，arr1通过new在堆内存中占据空间。但是arr2并没有使用new方法，而是指向了arr1的空间，共用同一个内存空间。arr1的值改变，arr2的值也会改变。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>java 03 语法结构</title>
     <url>/2024/03/03/java03/</url>
     <content><![CDATA[<h1 id="Java语法结构"><a href="#Java语法结构" class="headerlink" title="Java语法结构"></a>Java语法结构</h1><h2 id="判断结构"><a href="#判断结构" class="headerlink" title="判断结构"></a>判断结构</h2><ol>
@@ -412,57 +463,6 @@
 </ol>
 <h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> myPackage001;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> &#123;<br>    <span class="hljs-comment">//成员变量</span><br>    <span class="hljs-keyword">private</span> String username;<br>    <span class="hljs-keyword">private</span> String password;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-comment">//无参构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">User</span><span class="hljs-params">()</span> &#123;&#125;<br><br>    <span class="hljs-comment">//带全部参数的构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">User</span><span class="hljs-params">(String username, String password, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.username = username;<br>        <span class="hljs-built_in">this</span>.password = password;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//每个变量的getXxx()和setXxx()</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getUsername</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> username;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setUsername</span><span class="hljs-params">(String username)</span> &#123;<br>        <span class="hljs-built_in">this</span>.username = username;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getPassword</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> password;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setPassword</span><span class="hljs-params">(String password)</span> &#123;<br>        <span class="hljs-built_in">this</span>.password = password;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getAge</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> age;<br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setAge</span><span class="hljs-params">(<span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java 04 数组</title>
-    <url>/2024/03/04/java04/</url>
-    <content><![CDATA[<h1 id="Java数组"><a href="#Java数组" class="headerlink" title="Java数组"></a>Java数组</h1><h2 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h2><ol>
-<li><p><strong>静态初始化</strong></p>
-<p><code>数据类型[] 数组名 = new 数据类型[] &#123;元素1，元素2，元素3...&#125;;</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] array1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[] &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br><span class="hljs-type">int</span>[] array2 = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;  <span class="hljs-comment">//简写</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p><strong>动态初始化</strong></p>
-<p><code>数据类型[] 数组名 = new 数据类型[数组长度];</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">3</span>];<br></code></pre></td></tr></table></figure>
-
-<p>数组默认初始化值:</p>
-<ul>
-<li><strong>整数类型：</strong>0</li>
-<li><strong>小数类型：</strong>0.0</li>
-<li><strong>字符类型：</strong>‘&#x2F;u0000’   空格</li>
-<li><strong>布尔类型：</strong>false</li>
-<li><strong>引用数据类型：</strong>null</li>
-</ul>
-</li>
-</ol>
-<h2 id="数组的地址与元素访问"><a href="#数组的地址与元素访问" class="headerlink" title="数组的地址与元素访问"></a>数组的地址与元素访问</h2><ol>
-<li><p><strong>数组的地址</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br>System.out.println(arr);  <span class="hljs-comment">//[I@6d03e736</span><br></code></pre></td></tr></table></figure>
-
-<p><strong>“I”</strong>是数组类型，<strong>“6d03e736”</strong>是数组在内存中的位置</p>
-</li>
-<li><p><strong>元素访问</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br><br>System.out.println(arr[<span class="hljs-number">0</span>]);  <span class="hljs-comment">//1</span><br>System.out.println(arr[<span class="hljs-number">1</span>]);  <span class="hljs-comment">//2</span><br>System.out.println(arr[<span class="hljs-number">2</span>]);  <span class="hljs-comment">//3</span><br><br><span class="hljs-comment">//获取</span><br><span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> arr[<span class="hljs-number">0</span>];<br>System.out.println(num);  <span class="hljs-comment">//1</span><br><br><span class="hljs-comment">//存储</span><br>arr[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>;<br>System.out.println(arr[<span class="hljs-number">0</span>]);  <span class="hljs-comment">//10</span><br></code></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="数组的内存图"><a href="#数组的内存图" class="headerlink" title="数组的内存图"></a>数组的内存图</h2><ol>
-<li><p><strong>各自指向不同空间</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br><span class="hljs-type">int</span>[] arr2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br></code></pre></td></tr></table></figure>
-
-<p>此时arr1和arr2通过new在堆内存中占用两个内存空间。arr1和arr2相互独立。</p>
-</li>
-<li><p><strong>指向同一空间</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">2</span>];<br><span class="hljs-type">int</span>[] arr2 = arr1;<br></code></pre></td></tr></table></figure>
-
-<p>这段代码中，arr1通过new在堆内存中占据空间。但是arr2并没有使用new方法，而是指向了arr1的空间，共用同一个内存空间。arr1的值改变，arr2的值也会改变。</p>
-</li>
-</ol>
 ]]></content>
       <categories>
         <category>技术</category>
