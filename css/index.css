@@ -3402,16 +3402,16 @@ figure.highlight .code-expand-btn svg {
   --highlight-tools-color: #646464;
   --highlight-tools-bg-color: #e6ebf1;
   --highlight-scrollbar: #d7d7d7;
-  --highlight-addition: #e32323;
+  --highlight-addition: #ff0808;
   --highlight-deletion: #bf42bf;
-  --highlight-comment: rgba(149, 165, 166, 0.8);
-  --highlight-yellow: #ffb62c;
-  --highlight-purple: #7c4dff;
-  --highlight-aqua: #39adb5;
-  --highlight-red: #e53935;
-  --highlight-orange: #f76d47;
-  --highlight-green: #91b859;
-  --highlight-blue: #6182b8;
+  --highlight-comment: rgba(0, 128, 19, 0.8);
+  --highlight-yellow: #ffff00;
+  --highlight-purple: #7241f9;
+  --highlight-aqua: #ff0000;
+  --highlight-red: #c70300;
+  --highlight-orange: #b36b00;
+  --highlight-green: rgba(0, 128, 19, 0.8);
+  --highlight-blue: #0011c9;
 }
 :root.dark {
   --highlight-background: #303030;
@@ -3423,7 +3423,7 @@ figure.highlight .code-expand-btn svg {
   --highlight-scrollbar: #646464;
   --highlight-addition: #30de10;
   --highlight-deletion: #d62744;
-  --highlight-comment: #969896;
+  --highlight-comment: #c3e88d;
   --highlight-yellow: #ffcb6b;
   --highlight-purple: #c792ea;
   --highlight-aqua: #89ddff;
